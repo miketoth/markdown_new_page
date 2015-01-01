@@ -1,3 +1,8 @@
-#preview {
-    margin-top: 50px;
+.parent-div {
+    border: 1px solid red;
+    margin-right: 10px;
+    float: left;
+}
+#text-input {
+    font-size: 18px;
 }

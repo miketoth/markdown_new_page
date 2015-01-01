@@ -10,5 +10,5 @@ function Editor(input, preview) {
 }
 var $ = function (id) { return document.getElementById(id); };
 var div = document.getElementById("text-div");
-div.innerHTML = '<textarea id="text-input" rows="6" cols="60">Type **Markdown** here.</textarea>'
+div.innerHTML = '<textarea id="text-input" rows="100" cols="100">Type **Markdown** here.</textarea>'
 new Editor($("text-input"), $("preview"));
