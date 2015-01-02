@@ -1,8 +1,14 @@
 .parent-div {
-    border: 1px solid red;
     margin-right: 10px;
     float: left;
 }
-#text-input {
+#text-input, #text-input:focus {
+    outline: none !important;
+    font-size: 18px;
+    border: none;
+    overflow: auto;
+    border-color: transparent;
+}
+#preview {
     font-size: 18px;
 }
