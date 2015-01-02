@@ -8,6 +8,8 @@
     border: none;
     overflow: auto;
     border-color: transparent;
+    margin-top: 18px;
+    border-right: 1px solid black;
 }
 #preview {
     font-size: 18px;
