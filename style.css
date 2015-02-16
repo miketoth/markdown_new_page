@@ -1,5 +1,6 @@
 body {
     margin-top: 0px;
+    margin-left:0px;
 }
 .parent-div {
     margin-right: 10px;
@@ -11,16 +12,19 @@ body {
     border: none;
     border-color: transparent;
     margin-top: 18px;
+    margin-left: 4px;
     border-right: 1px solid black;
 }
 #preview {
     font-size: 18px;
 }
-/**footer {
+footer {
     position: fixed;
     margin-bottom:0px;
     bottom: 0px;
-    border: 1px solid red;
+    /*border: 1px solid red;*/
+    background-color: #d3d3d3;
     width: 100%;
-    height: 50px;
-}*/
+    height: 65px;
+}
+

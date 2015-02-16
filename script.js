@@ -1,3 +1,7 @@
+function deleteFile() {
+    chrome.storage.sync.remvoe('md_file');
+}
+
 function saveFile() {
     var file = document.getElementById("text-input").value;
     console.log(file);
@@ -27,11 +31,13 @@ var $ = function (id) { return document.getElementById(id); };
 
 // Get around CSP by selecting element by ID
 var div = document.getElementById("text-div");
-div.innerHTML = '<textarea id="text-input" rows="100" cols="75">Type **Markdown** here.</textarea>'
+div.innerHTML = '<textarea id="text-input" rows="34" cols="75">Type **Markdown** here.</textarea>'
 new Editor($("text-input"), $("preview"));
 
 // Same deal as above but with the buttons
 var saveButton = document.getElementById("save-button");
 var loadButton = document.getElementById("load-button");
+var deleteButton = document.getElementById("delete-button");
 saveButton.addEventListener("click", saveFile, false);
 loadButton.addEventListener("click", loadFile, false);
+deleteButton.addEventListener("click", deleteFile, false);

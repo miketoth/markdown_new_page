@@ -1,6 +1,7 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="font-awesome-4.3.0/css/font-awesome.min.css">
     </head>
     <title>
         A new page appeared
@@ -10,9 +11,11 @@
             <div id="text-div" class="parent-div"></div>
             <div id="preview" class="parent-div"> </div>
         </div>
-        <button id="save-button">Save</button>
-        <button id="load-button">Load</button>
-        <!--<footer>MIKE TOTH</footer>-->
+        <footer class="footer">
+            <button id="save-button"><i class="fa fa-floppy-o fa-4x"></i></button>
+            <button id="load-button"><i class="fa fa-folder-open-o fa-4x"></i></button>
+            <button id="delete-button"><i class="fa fa-trash-o fa-4x"></i></button>
+        </footer>
     </body>
         <script src="lib/markdown-js-0.5.0/lib/markdown.js"></script>
         <script src="script.js"></script>
