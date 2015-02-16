@@ -1,3 +1,6 @@
+body {
+    margin-top: 0px;
+}
 .parent-div {
     margin-right: 10px;
     float: left;
@@ -6,7 +9,6 @@
     outline: none !important;
     font-size: 18px;
     border: none;
-    overflow: auto;
     border-color: transparent;
     margin-top: 18px;
     border-right: 1px solid black;
@@ -14,3 +16,11 @@
 #preview {
     font-size: 18px;
 }
+/**footer {
+    position: fixed;
+    margin-bottom:0px;
+    bottom: 0px;
+    border: 1px solid red;
+    width: 100%;
+    height: 50px;
+}*/
