@@ -1,5 +1,5 @@
 function prepDownload() {
-    var blob = new Blob([document.getElementById("preview").innerHTML], {type: "text/html"});
+    var blob = new Blob([document.getElementById("text-input").value], {type: "text"});
     var url = URL.createObjectURL(blob);
     document.getElementById("download-link").href = url;
 }
