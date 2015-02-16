@@ -4,18 +4,19 @@
         <link rel="stylesheet" type="text/css" href="font-awesome-4.3.0/css/font-awesome.min.css">
     </head>
     <title>
-        A new page appeared
+        A barebones markdown notepad
     </title>
     <body>
         <div class ="content">
             <div id="text-div" class="parent-div"></div>
             <div id="preview" class="parent-div"> </div>
         </div>
-        <footer class="footer">
+        <div class="footer">
             <button id="save-button"><i class="fa fa-floppy-o fa-4x"></i></button>
             <button id="load-button"><i class="fa fa-folder-open-o fa-4x"></i></button>
             <button id="delete-button"><i class="fa fa-trash-o fa-4x"></i></button>
-        </footer>
+            <a id="download-link" href="" download="note.html"><button id="download-button"><i class="fa fa-download fa-4x"></i></button></a>
+        </div>
     </body>
         <script src="lib/markdown-js-0.5.0/lib/markdown.js"></script>
         <script src="script.js"></script>

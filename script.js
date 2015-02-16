@@ -1,38 +1,42 @@
+function prepDownload() {
+    var blob = new Blob([document.getElementById("preview").innerHTML], {type: "text/html"});
+    var url = URL.createObjectURL(blob);
+    document.getElementById("download-link").href = url;
+}
+
 function deleteFile() {
-    chrome.storage.sync.remvoe('md_file');
+    chrome.storage.sync.remove('md_file');
 }
 
 function saveFile() {
     var file = document.getElementById("text-input").value;
-    console.log(file);
-    chrome.storage.sync.set({'md_file': file}, function(){
-        console.log("FILE SAVED!");
-    });
+
+    // TODO: error checking
+    chrome.storage.sync.set({'md_file': file});
 }
 
 function loadFile() {
     chrome.storage.sync.get('md_file', function(items) {
-        console.log(items);
-        document.getElementById("text-input").value = items.md_file;
+        if(items.md_file !== undefined) {
+            document.getElementById("text-input").value = items.md_file;
+        }
     });
 }
 
 function Editor(input, preview) {
     this.update = function () {
         preview.innerHTML = markdown.toHTML(input.value);
+        prepDownload(); //seems like a bad solution
     };
     input.editor = this;
-    input.oninput = function() {
-        preview.innerHTML = markdown.toHTML(input.value);
-    };
+    input.oninput = this.update;
     this.update();
 }
-var $ = function (id) { return document.getElementById(id); };
 
 // Get around CSP by selecting element by ID
 var div = document.getElementById("text-div");
 div.innerHTML = '<textarea id="text-input" rows="34" cols="75">Type **Markdown** here.</textarea>'
-new Editor($("text-input"), $("preview"));
+new Editor(document.getElementById(("text-input")), document.getElementById(("preview")));
 
 // Same deal as above but with the buttons
 var saveButton = document.getElementById("save-button");
