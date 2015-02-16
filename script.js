@@ -1,3 +1,29 @@
+function openFileList() {
+
+    // check which way the arrow is facing before doing anything else
+    // right ==> collapse stuff
+    // left ==> open stuff
+
+    var parent = document.getElementsByClassName("content");
+    document.getElementById("preview").style.width = "24%";
+    document.getElementById("preview").style.border = "1px solid red";
+
+    // Switch icon from left arrow to right arrow
+    var icon = document.getElementsByClassName("fa-arrow-left");
+    icon = icon[0]; // get the first and only one
+    icon.className = "fa fa-arrow-right fa-2x";
+
+    // create the file list and dynamically append it
+    var fileList = document.createElement("div");
+    fileList.style.float = "right";
+    fileList.style["border-left"] = "1px solid black";
+    fileList.style.height = "88%";
+    fileList.style.width = "25%"
+
+    //var saveButton = document.createElement(
+
+    parent[0].appendChild(fileList);
+}
 function prepDownload() {
     var blob = new Blob([document.getElementById("text-input").value], {type: "text"});
     var url = URL.createObjectURL(blob);
@@ -42,6 +68,8 @@ new Editor(document.getElementById(("text-input")), document.getElementById(("pr
 var saveButton = document.getElementById("save-button");
 var loadButton = document.getElementById("load-button");
 var deleteButton = document.getElementById("delete-button");
+var fileListButton = document.getElementById("file-list-button");
 saveButton.addEventListener("click", saveFile, false);
 loadButton.addEventListener("click", loadFile, false);
 deleteButton.addEventListener("click", deleteFile, false);
+fileListButton.addEventListener("click", openFileList, false);
