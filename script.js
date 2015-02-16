@@ -35,7 +35,7 @@ function Editor(input, preview) {
 
 // Get around CSP by selecting element by ID
 var div = document.getElementById("text-div");
-div.innerHTML = '<textarea id="text-input" rows="32" cols="75">Type **Markdown** here.</textarea>'
+div.innerHTML = '<textarea id="text-input" rows="34" cols="75">Type **Markdown** here.</textarea>'
 new Editor(document.getElementById(("text-input")), document.getElementById(("preview")));
 
 // Same deal as above but with the buttons
