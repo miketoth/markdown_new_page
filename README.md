@@ -1,4 +1,4 @@
-# markdown_new_page
+# markdown notepad
 
 Chrome extension which replaces new tab page with a notepad. 
 
