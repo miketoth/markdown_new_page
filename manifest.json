@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
-    "name": "MD new page",
-    "version":  "1.0.0",
+    "name": "markdown notepad",
+    "version":  "1.0.1",
     "chrome_url_overrides": {
         "newtab": "newpage.html"
     },
@@ -12,7 +12,6 @@
     },
     "web_accessible_resources": ["script.js", "lib/markdown-js-0.5.0/lib/markdown.js"],
     "permissions": [
-        "storage",
-        {"fileSystem": ["write", "retainEntries", "directory"]}
+        "storage"
     ]
 }
