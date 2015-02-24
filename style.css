@@ -2,40 +2,55 @@ body {
     margin-top: 0px;
     margin-left:0px;
 }
-.parent-div {
-    margin-right: 10px;
-    float: left;
-}
-#text-input, #text-input:focus {
-    outline: none !important;
-    font-size: 18px;
-    border: none;
-    border-color: transparent;
-    margin-top: 18px;
-    margin-left: 8px;
+
+p {
+    margin-top: 10px;
 }
 
-#text-div {
+textarea {
+    padding-top: 0px;
+}
+
+.content {
+    width: 100%;
+    overflow: auto;
+}
+
+#text-input, #text-input:focus {
+    outline: none !important;
+    font-size: 12px;
+    border: none;
+    border-color: transparent;
+    margin-left: 8px;
+    margin-top: 10px;
+    width: 47%;
+    float: left;
+    height: 90%;
     border-right: 1px solid black;
 }
 
 #preview {
-    font-size: 18px;
+    margin-left: 8px;
+    font-size: 12px;
     overflow-x: scroll;
     overflow-y: scroll;
-    width: 49%;
-    height: 92%;
+    float: left;
+    width: 47%;
+    height: 90%;
 }
 
 .footer #save-button {
     margin: 7px auto auto 0;
 }
+
 .footer #load-button {
     margin: 7px auto auto auto;
 }
+
 .footer #delete-button {
     margin: 7px 0 auto auto;
 }
+
 .footer {
     text-align: center;
     position: fixed;
@@ -43,6 +58,6 @@ body {
     bottom: 0px;
     border-top: 1px solid black;
     width: 100%;
-    height: 63px;
+    height: 9%;
 }
 
