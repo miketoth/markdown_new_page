@@ -16,10 +16,6 @@ textarea {
     overflow: auto;
 }
 
-.content {
-    border-top: 1px solid black;
-}
-
 #file-list-button {
     float:right;
     padding: 8px;
@@ -39,15 +35,6 @@ textarea {
 
 #text-div {
     border-right: 1px solid black;
-}
-
-#file-name-box {
-    border: 1px solid black;
-    border-left: none;
-    width: 49%;
-    height: 5%;
-    margin-left:2px;
-    font-size:14px;
 }
 
 #preview {
