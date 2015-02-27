@@ -31,13 +31,10 @@ textarea {
     width: 47%;
     float: left;
     height: 90%;
-}
-
-#text-div {
     border-right: 1px solid black;
 }
 
-#preview {
+#preview-wrapper {
     margin-left: 8px;
     font-size: 12px;
     overflow-x: scroll;

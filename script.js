@@ -5,8 +5,8 @@ function openFileList() {
     // left ==> open stuff
 
     var parent = document.getElementsByClassName("content");
-    document.getElementById("preview").style.width = "24%";
-    document.getElementById("preview").style.border = "1px solid red";
+    document.getElementById("preview-wrapper").style.width = "29%";
+    document.getElementById("preview-wrapper").style.border = "1px solid red";
 
     // Switch icon from left arrow to right arrow
     var icon = document.getElementsByClassName("fa-arrow-left");
@@ -17,8 +17,8 @@ function openFileList() {
     var fileList = document.createElement("div");
     fileList.style.float = "right";
     fileList.style["border-left"] = "1px solid black";
-    fileList.style.height = "88%";
-    fileList.style.width = "25%"
+    fileList.style.height = "90%";
+    fileList.style.width = "20%"
 
     //var saveButton = document.createElement(
 
