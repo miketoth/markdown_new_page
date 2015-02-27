@@ -1,29 +1,46 @@
-function openFileList() {
+function manipulateFileList() {
 
-    // check which way the arrow is facing before doing anything else
-    // right ==> collapse stuff
-    // left ==> open stuff
+    // check to see which way the file list should go
+    if(document.getElementsByClassName("fa-arrow-left")[0]) {
+        var parent = document.getElementsByClassName("content");
+        document.getElementById("preview-wrapper").style.width = "29%";
 
-    var parent = document.getElementsByClassName("content");
-    document.getElementById("preview-wrapper").style.width = "29%";
-    document.getElementById("preview-wrapper").style.border = "1px solid red";
+        // Switch icon from left arrow to right arrow
+        var icon = document.getElementsByClassName("fa-arrow-left");
+        icon = icon[0]; // get the first and only one
+        icon.className = "fa fa-arrow-right fa-2x";
 
-    // Switch icon from left arrow to right arrow
-    var icon = document.getElementsByClassName("fa-arrow-left");
-    icon = icon[0]; // get the first and only one
-    icon.className = "fa fa-arrow-right fa-2x";
+        // create the file list and dynamically append it
+        var fileList = document.createElement("div");
+        fileList.style.float = "right";
+        fileList.style["border-left"] = "1px solid black";
+        fileList.style.height = "90%";
+        fileList.style.width = "20%"
+        fileList.id = "file-list";
+        fileList.parentNode = parent[0];
 
-    // create the file list and dynamically append it
-    var fileList = document.createElement("div");
-    fileList.style.float = "right";
-    fileList.style["border-left"] = "1px solid black";
-    fileList.style.height = "90%";
-    fileList.style.width = "20%"
+        //TODO put stuff in the file list here
 
-    //var saveButton = document.createElement(
+        parent[0].appendChild(fileList);
+    }
 
-    parent[0].appendChild(fileList);
+    else {
+        // reset styles
+        document.getElementById("preview-wrapper").style.width = "47%";
+
+        // switch icon back to left arrow
+        var icon = document.getElementsByClassName("fa-arrow-right");
+        icon = icon[0]; // get the first and only one
+        icon.className = "fa fa-arrow-left fa-2x";
+
+        // remove element
+        var fileList = document.getElementById("file-list");
+        if(fileList.parentNode) {
+            fileList.parentNode.removeChild(fileList);
+        }
+    }
 }
+
 function prepDownload() {
     var blob = new Blob([document.getElementById("text-input").value], {type: "text"});
     var url = URL.createObjectURL(blob);
@@ -72,4 +89,4 @@ var fileListButton = document.getElementById("file-list-button");
 saveButton.addEventListener("click", saveFile, false);
 loadButton.addEventListener("click", loadFile, false);
 deleteButton.addEventListener("click", deleteFile, false);
-fileListButton.addEventListener("click", openFileList, false);
+fileListButton.addEventListener("click", manipulateFileList, false);
